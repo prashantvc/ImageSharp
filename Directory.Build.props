@@ -14,6 +14,15 @@
     <!-- This MUST be defined before importing props. -->
     <SixLaborsSolutionDirectory>$(MSBuildThisFileDirectory)</SixLaborsSolutionDirectory>
 
+    <!--
+      Offline restore switch. MUST be defined before importing Global.props,
+      which appends the online feeds (nuget.org, feedz.io, Azure dnceng) to
+      RestoreSources only when this is not 'true'. Set the environment variable
+      SIXLABORS_OFFLINE_RESTORE=true in a network-restricted container to skip
+      those feeds and avoid NU1301 errors; leave it unset for normal/CI builds.
+    -->
+    <SixLaborsOfflineRestore Condition="'$(SixLaborsOfflineRestore)' == '' and '$(SIXLABORS_OFFLINE_RESTORE)' != ''">$(SIXLABORS_OFFLINE_RESTORE)</SixLaborsOfflineRestore>
+
     <!-- For some reason Debug-InnerLoop doesn't define DEBUG by default. -->
     <DefineConstants Condition="'$(Configuration)' == 'Debug-InnerLoop'">$(DefineConstants);DEBUG</DefineConstants>
   </PropertyGroup>

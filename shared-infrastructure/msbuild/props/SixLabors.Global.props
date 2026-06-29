@@ -80,8 +80,19 @@
     <Using Include="SixLabors" />
   </ItemGroup>
 
-  <!-- Required restore feeds. -->
-  <PropertyGroup>
+  <!--
+    Restore feeds.
+
+    By default the online feeds (nuget.org plus the SixLabors feedz.io and
+    Azure dnceng feeds) are appended so normal/CI builds resolve everything.
+
+    Set SixLaborsOfflineRestore=true (e.g. in a network-restricted container)
+    to skip appending these feeds. Restore then uses only the sources from
+    NuGet.config (nuget.org + the vendored local folder), which avoids the
+    NU1301 "unable to load service index" errors when the network feeds are
+    unreachable.
+  -->
+  <PropertyGroup Condition="'$(SixLaborsOfflineRestore)' != 'true'">
     <RestoreSources>
       $(RestoreSources);
       https://api.nuget.org/v3/index.json;
