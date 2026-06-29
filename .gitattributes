@@ -87,6 +87,7 @@
 *.basis             binary
 *.dll               binary
 *.exe               binary
+*.nupkg             binary
 *.pdf               binary
 *.ppt               binary
 *.pptx              binary
