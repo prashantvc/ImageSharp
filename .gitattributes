@@ -106,45 +106,45 @@
 *.rtf               diff=astextplain
 *.svg               diff=astextplain
 ###############################################################################
-# Handle image files by git lfs
+# Handle image files as binary (LFS removed)
 ###############################################################################
-*.jpg               filter=lfs diff=lfs merge=lfs -text
-*.jpeg              filter=lfs diff=lfs merge=lfs -text
-*.bmp               filter=lfs diff=lfs merge=lfs -text
-*.gif               filter=lfs diff=lfs merge=lfs -text
-*.png               filter=lfs diff=lfs merge=lfs -text
-*.qoi               filter=lfs diff=lfs merge=lfs -text
-*.tif               filter=lfs diff=lfs merge=lfs -text
-*.tiff              filter=lfs diff=lfs merge=lfs -text
-*.tga               filter=lfs diff=lfs merge=lfs -text
-*.webp              filter=lfs diff=lfs merge=lfs -text
-*.dds               filter=lfs diff=lfs merge=lfs -text
-*.ktx               filter=lfs diff=lfs merge=lfs -text
-*.ktx2              filter=lfs diff=lfs merge=lfs -text
-*.astc              filter=lfs diff=lfs merge=lfs -text
-*.pam               filter=lfs diff=lfs merge=lfs -text
-*.pbm               filter=lfs diff=lfs merge=lfs -text
-*.pgm               filter=lfs diff=lfs merge=lfs -text
-*.ppm               filter=lfs diff=lfs merge=lfs -text
-*.pnm               filter=lfs diff=lfs merge=lfs -text
-*.wbmp              filter=lfs diff=lfs merge=lfs -text
-*.exr               filter=lfs diff=lfs merge=lfs -text
-*.ico               filter=lfs diff=lfs merge=lfs -text
-*.cur               filter=lfs diff=lfs merge=lfs -text
-*.ani               filter=lfs diff=lfs merge=lfs -text
-*.heic              filter=lfs diff=lfs merge=lfs -text
-*.hif               filter=lfs diff=lfs merge=lfs -text
-*.avif              filter=lfs diff=lfs merge=lfs -text
+*.jpg               binary
+*.jpeg              binary
+*.bmp               binary
+*.gif               binary
+*.png               binary
+*.qoi               binary
+*.tif               binary
+*.tiff              binary
+*.tga               binary
+*.webp              binary
+*.dds               binary
+*.ktx               binary
+*.ktx2              binary
+*.astc              binary
+*.pam               binary
+*.pbm               binary
+*.pgm               binary
+*.ppm               binary
+*.pnm               binary
+*.wbmp              binary
+*.exr               binary
+*.ico               binary
+*.cur               binary
+*.ani               binary
+*.heic              binary
+*.hif               binary
+*.avif              binary
 ###############################################################################
-# Handle ICC files by git lfs
+# Handle ICC files as binary (LFS removed)
 ###############################################################################
-*.icc               filter=lfs diff=lfs merge=lfs -text
+*.icc               binary
 ###############################################################################
-# Handle font files by git lfs
+# Handle font files as binary (LFS removed)
 ###############################################################################
-*.eot               filter=lfs diff=lfs merge=lfs -text
-*.otf               filter=lfs diff=lfs merge=lfs -text
-*.ttc               filter=lfs diff=lfs merge=lfs -text
-*.ttf               filter=lfs diff=lfs merge=lfs -text
-*.woff              filter=lfs diff=lfs merge=lfs -text
-*.woff2             filter=lfs diff=lfs merge=lfs -text
+*.eot               binary
+*.otf               binary
+*.ttc               binary
+*.ttf               binary
+*.woff              binary
+*.woff2             binary
